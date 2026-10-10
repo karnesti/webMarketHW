@@ -7,6 +7,7 @@ public class ProductBasket {
     private Product[] prods = new Product[5];
     private int i = 0;
     private int cost = 0;
+    private static int count = 0;
 
     public ProductBasket() {
         System.out.println("Корзина пользователя успешно создана ");
@@ -35,8 +36,10 @@ public class ProductBasket {
         if (i > 0) {
             for (int j = 0; j < prods.length; j++) {
                 if (prods[j] != null) System.out.println(prods[j].toString());
+                if (prods[j].isSpecial()) {this.count++;}
             }
             System.out.println("Итого: " + this.costBasket() + " руб");
+            System.out.println("Специальных товаров: " + this.count);
         } else System.out.println("в корзине пусто");
     }
 
