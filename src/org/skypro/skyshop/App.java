@@ -75,6 +75,8 @@ public class App {
 
         System.out.println("\nПроверка изменений. Корзина:");
         basket1.printBasket();
+        System.out.println();
+        basket1.printBasket();
 
     }
 }

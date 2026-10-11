@@ -22,6 +22,6 @@ public class DiscountedProduct extends Product {
 
     @Override
     public String toString() {
-        return (  super.name + "(СО СКИДКОЙ) : " +  this.getPrice() + " руб. " + " (СКИДКА: " + discount + "%)") ;
+        return (  super.name + ": " +  this.getPrice() + " руб. " + "(" + discount + "%)") ;
     }
 }
