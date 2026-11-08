@@ -2,6 +2,8 @@ package org.skypro.skyshop;
 
 import org.skypro.skyshop.basket.ProductBasket;
 // import org.skypro.skyshop.product.Product;
+import org.skypro.skyshop.marketing.Article;
+import org.skypro.skyshop.marketing.SearchEngine;
 import org.skypro.skyshop.product.SimpleProduct;
 import org.skypro.skyshop.product.DiscountedProduct;
 import org.skypro.skyshop.product.FixPriceProduct;
@@ -77,6 +79,31 @@ public class App {
         basket1.printBasket();
         System.out.println();
         basket1.printBasket();
+
+        //------- ООП: интерфейсы, полиморфизм -----
+        System.out.println("\n*** ООП: интерфейсы, полиморфизм ***");
+        SearchEngine searchEngine = new SearchEngine(10);
+        searchEngine.add(prod1);
+        searchEngine.add(prod2);
+        searchEngine.add(prod3);
+        searchEngine.add(prod4);
+        searchEngine.add(prod5);
+        searchEngine.add(prod6);
+
+        Article article1 = new Article("Синяя ручка Erich Krause — пишите с удовольствием!", "Надёжная ручка с насыщенными синими чернилами подойдёт для учёбы, работы и повседневных записей. Удобный выбор всего за 29 рублей.");
+        Article article2 = new Article("Attache: синяя ручка для важных идей", "Записывайте планы, конспекты и вдохновение плавно и аккуратно. Сейчас синяя ручка Attache стоит 90 рублей — скидка 10% уже учтена.");
+        Article article3 = new Article("Карандаш Koh-i-Noor HB — точность в каждой линии", "Для заметок, эскизов и чертежей выбирайте карандаш Koh-i-Noor твёрдости HB. Отличный помощник для учёбы и творчества по фиксированной цене 99 рублей.");
+        Article article4 = new Article("Линейка Attache 15 см — точность всегда под рукой", "Чертите ровные линии и делайте измерения на уроках и дома. Линейка Attache длиной 15 см стоит 70 рублей — скидка 30% уже учтена.");
+
+        searchEngine.add(article1);
+        searchEngine.add(article2);
+        searchEngine.add(article3);
+        searchEngine.add(article4);
+
+        System.out.println("\n Результат поиска:");
+        searchEngine.search("Koh-i-Noor");
+
+
 
     }
 }
