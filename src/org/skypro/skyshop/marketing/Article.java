@@ -2,8 +2,8 @@ package org.skypro.skyshop.marketing;
 
 public class Article implements Searchable {
 
-    protected final String name;
-    protected final String text;
+    private final String name;
+    private final String text;
 
     public Article(String name, String text) {
         this.name = name;
@@ -27,8 +27,7 @@ public class Article implements Searchable {
 
     @Override
     public String getStringRepresentation() {
-        //System.out.println("");
-        return "0";
+        return this.name;
     }
 }
 
