@@ -28,8 +28,12 @@ public abstract class Product implements Searchable {
 
     @Override
     public String getSearchTerm() {
-        String searchTerm = this.name + " PRODUCT";
-        return  searchTerm;
+        return "\n"+ this.name + "\nPRODUCT";
+    }
+
+    @Override
+    public String getContentType() {
+        return "PRODUCT";
     }
 
 }

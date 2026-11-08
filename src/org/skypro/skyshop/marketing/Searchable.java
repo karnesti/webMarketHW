@@ -5,7 +5,7 @@ public interface Searchable {
     public String getSearchTerm();
     public String getContentType();
 
-    default String getStringRepresentation() {
+    public default String getStringRepresentation() {
         return "0";
     }
 
